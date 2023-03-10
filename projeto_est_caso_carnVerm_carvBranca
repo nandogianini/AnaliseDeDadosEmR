@@ -1,3 +1,10 @@
+estudo_de_caso<-data.frame(pais=c("Albania","Brasil","Belgica","argentina","Colombia",
+                             "Italia","Alemanhaa","Finlandia","França","Grecia"),
+                      regiao=c("Europa","America do Sul","Europa","America do Sul",
+                               "America do Sul","Europa","Europa","Europa",
+                              "Europa","Europa"),
+                      carne.verm=c(10.1,8.9,13.5,7.8,9.7,10.6,8.4,9.5,18,1020),
+                      carne.branca=c(1.4,14,9.3,6,11.4,10.8,11.6,4.9,9.9,3)) # Criação da tabela
 df<-estudo_de_caso
 str(df)
 #padronização dos nomes das colulas
