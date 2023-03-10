@@ -1,0 +1,28 @@
+df<-estudo_de_caso
+str(df)
+#padronização dos nomes das colulas
+names(df)<-c("pais","regiao","carne_vermelha","carne_branca")
+str(df)
+levels(as.factor(df$pais))
+#correção dos dados da coluna pais
+df["pais"][df["pais"]=='Alemanhaa']<-"Alemanha"
+df["pais"][df["pais"]=='argentina']<-"Argentina"
+levels(as.factor(df$pais))
+levels(as.factor(df$regiao))
+df["regiao"][df["regiao"]=='América do Sul']<-"america_sul"
+levels(as.factor(df$carne_vermelha))
+#correção dos dados da coluna carne_vermelha
+df["carne_vermelha"][df["carne_vermelha"]=='1020']<-"10.2"
+levels(as.factor(df$carne_vermelha))
+levels(as.factor(df$carne_branca))
+summary(df)
+#alteração do tipo de dados
+df$carne_vermelha<-as.numeric(df$carne_vermelha)
+df$carne_branca<-as.numeric(df$carne_branca)
+summary(df)
+df
+#criação de imagem pais x regiao
+table(df$regiao)
+prop.table(table(df$regiao))*100
+par(mfrow=c(1,2))
+barplot(table(df$regiao))
